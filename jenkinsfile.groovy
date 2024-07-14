@@ -5,11 +5,12 @@ pipeline{
         stage('stage-1'){
             steps{
                 script{
+                    println params.name
                     //name = "shubham,amruta,pallavi"
-                    people_names = params.name.split(',') 
-                    for(name in people_names){
-                        println 'My name is: ' + name
-                    }
+                    // def people_names = params.name.split(',') 
+                    // for(value in people_names){
+                    //     println 'My name is: ' + value
+                    // }
                 }
             }
         }

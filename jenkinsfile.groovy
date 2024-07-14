@@ -5,16 +5,18 @@ pipeline{
         stage('stage-1'){
             steps{
                 script{
+
                     println 'My name is: ' + params.name
                     def people_name = params.name.split(',')
-                    for (element in people_name) {
-                        println 'My name is: ' + element
+                    for (nav in people_name) {
+                        println 'My name is: ' + nav
+                        if(nav == "amruta"){
+                            println "haha she is getting married ..!"
+                        }else if(nav == "shubham"){
+                            println "humare to maje hai..!"
+                        }
                     }
-                    //name = "shubham,amruta,pallavi"
-                    // def people_names = params.name.split(',') 
-                    // for(value in people_names){
-                    //     println 'My name is: ' + value
-                    // }
+                    
                 }
             }
         }

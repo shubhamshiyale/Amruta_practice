@@ -15,6 +15,10 @@ pipeline{
                         }else if(nav == "shubham"){
                             println "humare to maje hai..!"
                         }
+
+                    }
+                    if(!params.name.contains("sharjeel")){
+                        println 'pata nahi ab kaha hai .?'
                     }
                     
                 }
